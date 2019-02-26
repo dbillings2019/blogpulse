@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/dbillings2019/blogpulse/issues"
   },
-  "homepage": "https://github.com/dbillings2019/blogpulse#readme"
+  "homepage": "https://github.com/dbillings2019/blogpulse#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "express-ejs-layouts": "^2.5.0",
+    "pg": "^7.8.1",
+    "sequelize": "^4.42.0"
+  }
 }

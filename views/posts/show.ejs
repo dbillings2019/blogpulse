@@ -1,0 +1,24 @@
+<h1><%= post.title %> by <%= post.author.name %></h1>
+
+<p><%= post.content %></p>
+
+<!-- show comments with author or comment-->
+<h4>Comments:</h4>
+
+<% post.comments.forEach (function(comment) { %>
+    <h5><%= comment.name %> </h5>
+    <p><%= comment.content %></p>
+<% }) %>
+
+<!-- add comment form -->
+<h4>Add a comment:</h4>
+<form action="/comments" method="POST">
+    <input type="hidden" name="postId" value="<%= post.id %>">
+    <input type="text" name="name" placeholder="Your name..."><br>
+    <input type="text" name="content" placeholder="Comment here..."><br>
+    <input type="submit" value="Post Comment">
+    </form>
+
+<hr />
+
+<a href="/">&larr; Back Home</a>
